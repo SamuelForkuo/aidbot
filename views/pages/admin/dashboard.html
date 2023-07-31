@@ -1,0 +1,34 @@
+{% extends "layouts/homelayout.twig" %}
+
+{% block links %}
+<link rel="stylesheet" href="{{asset('styles/pages/admin.css')}}">
+    <link rel="stylesheet" href="{{asset('styles/components/cards.css')}}">
+{% endblock %}
+
+{% block contents %}
+    {% import "components/splash_screen.twig" as splash %}
+    {% import "components/cards.twig" as card %}
+
+    <div class="stats">
+        {{card.statCard("Visits Today", 1231) }}
+        {{card.statCard("Total Visits", 1231, "bi bi-globe-asia-australia") }}
+        {{card.statCard("Number of Aids", 231, "bi bi-balloon-heart") }}
+        {{card.statCard("Messages", 231, "bi bi-chat-dots") }}
+    </div>
+
+    <div class="table-title flex-row flex-between">
+        <h2 class="orbitron">Recent Aids</h2>
+
+        <a href="{{route('newAid')}}">
+            <button>Add New Aid</button>
+        </a>
+    </div>
+
+    <div class="cards aids">
+        {% for card in aids %}
+            {{card.SimpleDel(card, "View Aid")}}
+        {% endfor %}
+    </div>
+
+
+{% endblock %}

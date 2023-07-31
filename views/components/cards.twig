@@ -1,0 +1,41 @@
+
+{% macro Simple(title = "Card title here", button="Get Aid", image="images/first_aid_card.jpg", icon="bi bi-balloon-heart") %}
+    <div class="card ov-hidden">
+        <div class="image">
+            <img src="{{asset(image)}}" alt="first aid" class="obj-fit">
+        </div>
+        <div class="contents">
+            <b class="title text-center flex-center">{{title}}</b>
+            <button>{{button}} <i class="{{icon}}"></i></button>
+        </div>
+    </div>
+{% endmacro %}
+
+
+{% macro SimpleDel(title = "Card title here", button="Get Aid", image="images/first_aid_card.jpg", icon="bi bi-balloon-heart") %}
+    <div class="card ov-hidden">
+        <div class="image">
+            <img src="{{asset(image)}}" alt="first aid" class="obj-fit">
+        </div>
+        <div class="contents">
+            <b class="title text-center flex-center">{{title}}</b>
+
+            <div class="simple-del">
+                <button>{{button}} <i class="{{icon}}"></i></button>
+                <button><i class="bi bi-trash"></i></button>
+            </div>
+        </div>
+    </div>
+{% endmacro %}
+
+{% macro statCard(name="Statistical Name", value="12123", icon="bi bi-eye") %}
+    <div class="stat-card">
+        <div class="info flex-row flex-between">
+            <div class="name">{{name}}</div>
+            <div class="icon">
+                <i class="{{icon}}"></i>
+            </div>
+        </div>
+        <div class="value orbitron">{{value}}</div>
+    </div>
+{% endmacro %}

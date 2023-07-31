@@ -1,0 +1,15 @@
+{
+    "require": {
+        "phroute/phroute": "^2.2",
+        "symfony/error-handler": "^6.3",
+        "twig/twig": "^3.7"
+    },
+
+    "autoload": {
+        "psr-4": {
+            "Models\\": "models",
+            "Controllers\\": "controllers",
+            "Controllers\\Users\\": "controllers/users/"
+        }
+    }
+}

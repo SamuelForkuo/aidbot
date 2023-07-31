@@ -1,0 +1,8 @@
+RewriteEngine On
+
+# Exclude specific directories from rewriting
+RewriteRule ^(assets) - [L]
+
+# Rewrite requests to routes/index.php
+RewriteCond %{REQUEST_URI} !^/aidapp/routes\.php
+RewriteRule !\.(css|js|png|jpg|gif|html)$ /aidapp/routes.php [L]

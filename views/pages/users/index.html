@@ -1,0 +1,35 @@
+{% extends "layouts/homelayout.twig" %}
+
+{% block links %}
+    <link rel="stylesheet" href="{{asset('styles/components/header.css')}}">
+    <link rel="stylesheet" href="{{asset('styles/components/cards.css')}}">
+    <link rel="stylesheet" href="{{asset('styles/pages/home.css')}}">
+{% endblock %}
+
+{% block contents %}
+    {% import "components/header.twig" as hero %}
+    {% import "components/cards.twig" as card %}
+    {% import "components/splash_screen.twig" as splash %}
+
+    {{hero.heroSearch()}}
+
+    <section>
+        <h2 class="orbitron text-center"> <span class="red">Frequently Used</span> First Aids</h2>
+
+        <div class="cards ">
+            {% for card in aids %}
+                {{card.Simple(card)}}
+            {% endfor %}
+        </div>
+
+        <div class="flex-center p-1">
+            <a href="{{route('our_aids')}}">
+                <button class="success-btn">View All <i class="bi bi-eye"></i></button>
+            </a>
+        </div>
+
+    </section>
+
+    {{ splash.splashScreen() }}
+
+{% endblock %}

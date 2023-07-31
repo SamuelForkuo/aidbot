@@ -1,0 +1,40 @@
+{% macro heroSearch(title='<span class="green">Empowering</span>You to Respond, First <span class="green">Aid</span> Essentials <span class="green">at Your Fingertips</span>', placeholder='Search for the aid you require') %} 
+    <header class="p-rel">
+
+        <div class="bg-image p-abs top-left full-hw">
+            <img src="{{asset('images/bg.png')}}" alt="header background" class="obj-fit">
+            <div class="overlay p-abs full-hw top-left flex-center flex-col">
+
+                <div class="content text-center">
+
+                    <h1 class="orbitron"> {{title}} </h1>
+                    <div class="search-box p-rel">
+                        <input class="full-hw" type="text" name="search" placeholder="{{placeholder}}">
+                        <button class="full-hw flex-center">
+                            <i class="bi bi-search-heart"></i>
+                        </button>
+
+                        <div class="results p-abs full-w top-left">
+                        
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+{% endmacro %}
+
+
+{% macro searchBox(placeholder='Search for the aid you require', icon="bi bi-search") %}
+    <div class="search-box p-rel">
+        <input class="full-hw" type="text" name="search" placeholder="{{placeholder}}">
+        <button class="full-hw flex-center">
+            <i class="{{icon}}"></i>
+        </button>
+
+        <div class="results p-abs full-w top-left">
+        
+        </div>
+    </div>
+{% endmacro %}

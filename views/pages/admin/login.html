@@ -1,0 +1,28 @@
+{% extends "layouts/homelayout.twig" %}
+
+{% block links %}
+    <link rel="stylesheet" href="{{asset('styles/pages/home.css')}}">
+{% endblock %}
+
+{% block contents %}
+    {% import "components/splash_screen.twig" as splash %}
+
+    <section class="contact-us">
+        <h2 class="orbitron text-center"> <span class="red">Admin</span> Log-in</h2>
+
+        <div class="input">
+            <input type="text" name="name" placeholder="Username">
+        </div>
+
+        <div class="input">
+            <input type="password" name="password" placeholder="Your Password">
+        </div>
+
+
+        <a href="{{route('admin')}}">
+            <button>Log In</button>
+        </a>
+    </section>
+
+
+{% endblock %}

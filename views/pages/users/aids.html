@@ -1,0 +1,28 @@
+{% extends "layouts/homelayout.twig" %}
+
+{% block links %}
+    <link rel="stylesheet" href="{{asset('styles/components/header.css')}}">
+    <link rel="stylesheet" href="{{asset('styles/components/cards.css')}}">
+    <link rel="stylesheet" href="{{asset('styles/pages/home.css')}}">
+{% endblock %}
+
+{% block contents %}
+    {% import "components/header.twig" as hero %}
+    {% import "components/cards.twig" as card %}
+
+    <section>
+
+        {{ hero.searchBox() }}
+
+        <div class="cards aids">
+            {% for card in aids %}
+                {{card.Simple(card)}}
+            {% endfor %}
+        </div>
+
+        <div class="flex-center p-1">
+            <button class="success-btn">View All <i class="bi bi-eye"></i></button>
+        </div>
+
+    </section>
+{% endblock %}

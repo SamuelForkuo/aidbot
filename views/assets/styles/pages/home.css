@@ -1,0 +1,64 @@
+
+span.green {
+    color: var(--green);
+}
+
+span.red {
+    color: var(--red);
+}
+
+section {
+    padding: 1rem;
+}
+
+section h2 {
+    padding-bottom: 1rem;
+}
+
+
+.success-btn {
+    background: var(--dull-green);
+    border-radius: 10px;
+    color: var(--white);
+    padding: .5rem 2rem;
+}
+
+section .search-box {
+    background: var(--deep-black);
+}
+
+
+.cards.aids {
+    margin-top: 2rem;
+}
+
+section.contact-us {
+    margin: 2rem auto;
+    max-width: 700px;
+}
+
+.contact-us input, .contact-us textarea, .contact-us button {
+    background: var(--deep-black);
+    border-radius: 10px;
+    color: var(--white);
+    height: 60px;
+    padding: .75rem;
+    margin-top: .5rem;
+    width: 100%;
+
+    font-family: inherit;
+}
+
+.contact-us textarea {
+    height: 300px;
+    resize: none;
+}
+
+.contact-us button {
+    background: var(--red);
+    cursor: pointer;
+}
+
+.contact-us button:active {
+    background: var(--dull-green);
+}

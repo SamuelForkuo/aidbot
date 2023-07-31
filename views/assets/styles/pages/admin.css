@@ -1,0 +1,110 @@
+
+.table-title {
+    max-width: 1060px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.new-add {
+    padding: 1rem 2rem;
+    padding-bottom: 0;
+}
+
+
+
+.table-title button, .new-add button {
+    background: var(--dull-green);
+    border-radius: 10px;
+    color: var(--white);
+    padding: .5rem 1rem;
+}
+
+.table-items .item {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.cards {
+    margin-top: 2rem;
+}
+
+#editor, .ql-editor {
+    min-height: 100vh;
+    color: var(--white);
+}
+
+.input-area > input {
+    background: var(--deep-black);
+    color: var(--white);
+    padding: 1rem;
+    height: 60px;
+    border-radius: 10px;
+    width: 100%;
+
+    margin-bottom: 1rem;
+    font-size: 200%;
+}
+
+.ql-editor::before, .ql-editor::after {
+    color: var(--gray) !important; /* Text color */
+}
+
+
+.boxes {
+    padding-bottom: 1rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-auto-rows: 200px;
+    gap: .5rem;
+}
+
+.boxes > .box-item {
+    background: var(--deep-black);
+}
+
+.box-item .bi {
+    font-size: 300%;
+}
+
+.box-item:hover {
+    color: var(--red-color);
+    cursor: pointer;
+}
+
+
+
+
+
+
+
+video, iframe {
+    max-width: 600px;
+    max-height: 600px;
+}
+
+
+
+@media only screen and (max-width: 575px) {
+
+    body .stats {
+        grid-template-columns: 1fr 1fr;
+        font-size: 80%;
+    }
+
+
+
+    .table-items {
+        padding: 0 1rem;
+    }
+
+    .cards {
+        padding: 1rem;
+    }
+} 
+
+@media only screen and (max-width: 375px) {
+    body .stats {
+        grid-template-columns: 1fr;
+        gap: .5rem;
+    }
+}

@@ -1,0 +1,29 @@
+{% extends "layouts/homelayout.twig" %}
+
+{% block links %}
+    <link rel="stylesheet" href="{{asset('styles/pages/home.css')}}">
+{% endblock %}
+
+{% block contents %}
+    {% import "components/splash_screen.twig" as splash %}
+
+    <section class="contact-us">
+        <h2 class="orbitron text-center"> <span class="red">Contact</span> Us</h2>
+
+        <div class="input">
+            <input type="text" name="name" placeholder="Your Name">
+        </div>
+
+        <div class="input">
+            <input type="text" name="email" placeholder="Your Email">
+        </div>
+
+        <div class="input">
+            <textarea name="message" placeholder="Your Message..."></textarea>
+        </div>
+
+        <button>Send Message</button>
+    </section>
+
+
+{% endblock %}

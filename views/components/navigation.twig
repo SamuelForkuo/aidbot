@@ -1,0 +1,29 @@
+
+{% macro homeNav() %}
+    <nav class="homeNav flex-row flex-between">
+        <div class="left flex-row">
+            <div class="logo round ov-hidden">
+                <img src="{{asset('images/logo.png')}}" alt="logo" class="obj-fit">
+            </div>
+
+            <div class="logo-text orbitron"><span>Aid</span>Bot</div>
+
+        </div>
+
+        <div class="nav-links flex-row">
+            <a class="nav-link mobile flex-center" onclick="$('.nav-links').removeClass('active');">
+                <i class="bi bi-x-lg"></i>
+            </a>
+            <a href="{{route('home')}}" class="nav-link">Home</a>
+            <a href="{{route('our_aids')}}" class="nav-link">Our Aids</a>
+            <!-- <a href="{{route('home')}}" class="nav-link">Our Advisors</a>
+            <a href="{{route('home')}}" class="nav-link">Our Chat</a> -->
+            <a href="{{route('contact')}}" class="nav-link">Contact Us</a>
+            <a href="{{route('login')}}" class="nav-link">Log-in</a>
+        </div>
+
+        <div class="menu-btn flex-center mobile" onclick="$('.nav-links').addClass('active');">
+            <i class="bi bi-list"></i>
+        </div>
+    </nav>
+{% endmacro %}
